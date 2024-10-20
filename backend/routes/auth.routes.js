@@ -3,8 +3,11 @@ import { login, logout, signup } from "../controllers/auth.controller.js";
 
 const router = express.Router();
 
-router.post("api/auth/signup", signup);
-router.post("api/auth/login" , login);
-router.post("api/auth/logout", logout);
+// Fixed the path by adding a leading "/" before "api/auth/signup"
+router.post("/signup", signup);  // This should match the base path
+
+router.post("/login", login);
+
+router.post("/logout", logout);
 
 export default router;
