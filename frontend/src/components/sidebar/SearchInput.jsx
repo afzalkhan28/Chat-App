@@ -1,5 +1,5 @@
 import React from 'react'
-import IoSearchSharp from 'react-icons/io'
+import {IoSearchSharp} from 'react-icons/io5'
 
 const SearchInput = () => {
     return (
@@ -16,6 +16,6 @@ const SearchInput = () => {
 			</button>
 		</form>
 	);
-}
+};
 
-export default SearchInput
+export default SearchInput;

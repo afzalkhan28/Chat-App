@@ -1,6 +1,12 @@
 import React from 'react'
+import useConversation from '../../zustand/useConversation';
 
-const Conversation = () => {
+const Conversation = ({ conversation, lastIdx, emoji }) => {
+	const { selectedConversation, setSelectedConversation } = useConversation();
+
+	const isSelected = selectedConversation?._id === conversation._id;
+	const { onlineUsers } = useSocketContext();
+	const isOnline = onlineUsers.includes(conversation._id);
     return (
 		<>
 			<div

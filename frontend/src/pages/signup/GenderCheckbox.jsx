@@ -1,6 +1,6 @@
 import React from 'react'
 
-const GenderCheckBox = () => {
+const GenderCheckBox = (onCheckboxChange,selectedGender) => {
     return (
 		<div className='flex'>
 			<div className='form-control'>
